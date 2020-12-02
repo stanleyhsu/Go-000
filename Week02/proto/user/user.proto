@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "proto/user";
+
+package user;
+
+// The User service definition.
+service User {
+    // Sends a greeting
+    rpc GetUserByName (UserRequest) returns (UserReply) {
+    }
+}
+
+// The request message containing the user_client's name.
+message UserRequest {
+    string name = 1;
+}
+
+// The response message containing the user_client info
+message UserReply {
+    string name = 1;
+    uint32 age = 2;
+    string cellphone = 3;
+    string email = 4;
+}
