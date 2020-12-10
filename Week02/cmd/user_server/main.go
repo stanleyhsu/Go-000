@@ -7,7 +7,7 @@ import (
 
 	"github.com/stanleyhsu/Go-000/Week02/internal/service"
 
-	pb "github.com/stanleyhsu/Go-000/Week02/proto/user"
+	pb "github.com/stanleyhsu/Go-000/Week02/proto/user/v1"
 	"google.golang.org/grpc"
 )
 
@@ -20,7 +20,7 @@ type server struct {
 	pb.UnimplementedUserServer
 }
 
-func (*server) GetUserByName(ctx context.Context, in *pb.UserRequest) (*pb.UserReply, error) {
+func (s *server) GetUserByName(ctx context.Context, in *pb.UserRequest) (*pb.UserReply, error) {
 	log.Printf("Received: %v", in.GetName())
 	rsp, err := service.GetUserByName(ctx, in.GetName())
 	if err != nil {
