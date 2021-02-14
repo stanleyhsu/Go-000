@@ -16,9 +16,19 @@ uber-go/fx; 不是很好；
 ## PO
 github.com/facebook/ent
 
+## ddd
+- VO（View Object）：视图对象，用于展示层
+- DTO（Data Transfer Object）：数据传输对象;泛指用于展示层与服务层之间的数据传输对象。
+- DO（Domain Object）：领域对象，就是从现实世界中抽象出来的有形或无形的业务实体。
+- PO（Persistent Object）：持久化对象
+
+
+
 # API
 
 
 
 # team Action
 * grpc status
+- API 字段名参考谷歌API；
+
